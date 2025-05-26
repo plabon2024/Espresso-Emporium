@@ -8,7 +8,7 @@ const AddCoffee = () => {
     const formData = new FormData(form);
     const coffeeData = Object.fromEntries(formData.entries());
 
-   fetch('http://localhost:3000/addcoffee',{
+   fetch(`${import.meta.env.VITE_baseurl}/addcoffee`,{
     method:'POST',
     headers:{
       'content-type':'application/json'

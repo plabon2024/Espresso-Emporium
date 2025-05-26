@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/updatecoffee/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/coffee/${params.id}`),
+          fetch(`${import.meta.env.VITE_baseurl}/coffee/${params.id}`),
         Component: UpdateCoffee,
       },
 
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         path: "/coffee/:id",
 
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/coffee/${params.id}`),
+          fetch(`${import.meta.env.VITE_baseurl}/coffee/${params.id}`),
 
         Component: CoffeeDetails,
       },

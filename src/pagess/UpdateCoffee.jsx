@@ -10,7 +10,8 @@ const UpdateCoffee = () => {
     const form = e.target;
     const formData = new FormData(form);
     const updatedCoffee = Object.fromEntries(formData.entries());
-    fetch(`http://localhost:3000/coffee/${_id}`, {
+
+    fetch(`${import.meta.env.VITE_baseurl}/coffee/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

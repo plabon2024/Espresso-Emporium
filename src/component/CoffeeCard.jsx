@@ -7,7 +7,7 @@ import { Link } from "react-router";
 const CoffeeCard = ({coffee}) => {
   const{name,chef,photo,price,_id}=coffee
   const handleDelete=(_id)=>{
-    fetch(`http://localhost:3000/delete/${_id}`,{
+    fetch(`${import.meta.env.VITE_baseurl}/delete/${_id}`,{
       method:"DELETE"
     }).then(res=>res.json())
     .then(data=>{console.log(data)})

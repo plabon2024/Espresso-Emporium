@@ -6,7 +6,7 @@ import { Link } from "react-router";
 const CoffeeContainer = () => {
   const [coffees, setCoffees] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/addcoffee")
+    fetch(`${import.meta.env.VITE_baseurl}/addcoffee`)
       .then((res) => res.json())
       .then((data) => {
         setCoffees(data);
